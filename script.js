@@ -1,7 +1,7 @@
 // Vamos a hacer un juego de piedra, papel y tijeras:
 
 
-// Selecciona de manera aleatoria una de las tres opciones
+// Selecciona de manera aleatoria una de las tres opciones para la máquina
 function computerPlay() {
     let option = ["rock", "paper", "scissors"];
     
@@ -12,6 +12,7 @@ function computerPlay() {
 }
 
 //computerPlay()
+
 
 // Corre el juego utilizando como entradas la elección del jugador y la elección aleatoria de la anterior función
 function rps(playerSelection, computerSelection) {
@@ -48,8 +49,9 @@ function rps(playerSelection, computerSelection) {
         const resultado = -1;
         return resultado;
     }
-    
 }
+
+//rps("paper", computerPlay())
 
 //const computer = computerPlay();
 //const ply = prompt("¿Cúal es tu elección?: rock, paper, scissors").toLocaleLowerCase()
@@ -88,4 +90,24 @@ function game() {
     }
 }
 
-game()
+//Se llama la función para iniciar el juego.
+//game()
+
+
+
+
+
+const rck = document.querySelector("#roca");
+rck.addEventListener('click', () => {
+    rps("rock", computerPlay());
+});
+
+const pper = document.querySelector("#papel");
+pper.addEventListener('click', () => {
+    rps("paper", computerPlay());
+});
+
+const sciss = document.querySelector("#tijera");
+sciss.addEventListener('click', () => {
+    rps("scissors", computerPlay());
+});
